@@ -11,7 +11,6 @@ var autoprefixer = require('gulp-autoprefixer'); // For writing cleaner CSS savi
 var notify = require('gulp-notify'); // For notifying your operating system after tasks have successfully run - like an 'everything is ok' alarm
 var sprite = require('css-sprite').stream; // For generating CSS image sprites
 var imagemin = require('gulp-imagemin'); // For image compression and optimisation
-var gzip = require('gulp-gzip'); // For gzipping assets
 var livereload = require('gulp-livereload'); // For reloading changes live in the browser
 var del = require('del'); // For cleaning up leftovers
 
@@ -58,7 +57,6 @@ gulp.task('scripts', function() {
   	.pipe(plumber())
 	.pipe(concat('all.min.js'))
 	.pipe(uglify())
-  .pipe(gzip())
 	.pipe(gulp.dest('dist/js'))
     .pipe(notify({ message: 'JavaScript compiled' }));
 });
@@ -72,7 +70,6 @@ gulp.task('styles', function () {
 	.pipe(autoprefixer())
 	.pipe(concat('all.min.css'))
 	.pipe(minifycss())
-  .pipe(gzip())
 	.pipe(gulp.dest('dist/css'))
     .pipe(notify({ message: 'CSS Compiled' }));
 });
