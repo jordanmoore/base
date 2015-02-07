@@ -76,7 +76,7 @@ gulp.task('styles', function () {
 
 // Image optimisations
 gulp.task('images', function() {
-  return gulp.src(paths.images + '**/*')
+  return gulp.src([paths.images + '*.png', paths.images + '*.jpg'])
   	.pipe(plumber())
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
     .pipe(gulp.dest('dist/images'))
@@ -85,7 +85,7 @@ gulp.task('images', function() {
 
 // Cleanups
 gulp.task('clean', function(cb) {
-    del(['dist/css', 'dist/js', 'dist/img'], cb)
+    del(['dist/css', 'dist/js', 'dist/images'], cb)
 });
 
 // Run gulp watch to auto reload with livereload browser plugin
