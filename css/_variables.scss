@@ -1,0 +1,38 @@
+$metal: 'MetaCompPro-Light W01 Regular', 'Trebuchet MS', sans-serif;
+$meta: 'Meta Offc W01 Normal', 'Trebuchet MS', sans-serif;
+$metai: 'Meta Offc W01 Normal Italic', 'Trebuchet MS', sans-serif;
+$metam: 'MetaCompPro-Medium W01 Regular', 'Trebuchet MS', sans-serif;
+$metab: 'MetaCompPro-Bold W01 Regular', 'Trebuchet MS', sans-serif;
+
+// Theme Colours
+
+$link: #007dcf;
+$dark: #1F3E49;
+$light: #e6ebec;
+$tint: darken($light,6.18%);
+
+// Type Colours
+
+$grey: #a3a6b0;
+$black: #454648;
+
+// Common Measurements
+
+$nav-full: 1193px;
+
+.link-nohover {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.link-alt {
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.rounded {
+	border-radius: 100%;
+}
