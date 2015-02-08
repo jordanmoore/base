@@ -33,10 +33,10 @@ gulp.task('sprites', function () {
       name: 'sprite',
       style: '_sprite.scss',
       retina: true,
-      cssPath: '../img/icons',
+      cssPath: '../images/icons',
       processor: 'scss'
     }))
-    .pipe(gulpif('*.png', gulp.dest('dist/img/icons/'), gulp.dest(paths.css)))
+    .pipe(gulpif('*.png', gulp.dest('dist/images/icons/'), gulp.dest(paths.css)))
 });
 
 // Optional generate base64 sprite for uber-optimisation
